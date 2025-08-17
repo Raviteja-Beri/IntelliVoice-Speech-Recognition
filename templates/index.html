@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IntelliVoice Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 IntelliVoice Assistant</h1>
+        <form method="POST">
+            <input type="text" name="user_input" placeholder="Ask me something..." required>
+            <button type="submit">Send</button>
+        </form>
+
+        {% if user_input %}
+            <div class="chat">
+                <p><strong>You:</strong> {{ user_input }}</p>
+                <p><strong>Assistant:</strong> {{ response }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
